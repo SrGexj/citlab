@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+  line-height: normal !important;
+}
+
+p{
+  line-height: 25.5px !important;
+}
+
+html, body{
+  background-color: #26251B;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+body{
+  min-height: 100dvh;
+}
+
+main{
+  background-color: #FAF8F3;
+}
