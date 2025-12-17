@@ -3,12 +3,17 @@
   line-height: normal !important;
 }
 
+/* Excluir el Cookie Manager de la regla global de line-height */
+#cookie-kit-wrapper *, #cookie-kit-wrapper p {
+  line-height: 1.5 !important;
+}
+
 p{
   line-height: 25.5px !important;
 }
 
 html, body{
-  background-color: #26251B;
+  background-color: #595959;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
 }

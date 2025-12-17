@@ -20,13 +20,7 @@ function App() {
     <>
       <Header />
       <AnimatePresence mode='wait'>
-        <motion.main
-          className="Main bg-white min-h-screen"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <main className="Main bg-white min-h-screen" >
           <Routes location={location} key={location.pathname}>
             {Object.values(routes).map((route, index) => (
               <Route 
@@ -38,7 +32,7 @@ function App() {
             ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </motion.main> 
+        </main> 
       </AnimatePresence>
       <Footer />
     </>

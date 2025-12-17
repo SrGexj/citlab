@@ -1,1 +1,50 @@
 /* Añade aquí tus estilos globales del App */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@font-face {
+    font-family: 'TT Hoves Pro';
+    src: url('/fonts/TT Hoves Pro Trial Variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-ibMono: 'IBM Plex Mono', monospace;
+    --font-ttHoves: 'TT Hoves Pro', sans-serif;
+}
+
+body {
+    font-family: 'TT Hoves Pro', sans-serif;
+}
+
+.nextToBe{
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    filter: grayscale(100%);
+}
+
+@keyframes flowAnimation {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -40; }
+}
+
+.circuit-flow {
+  animation: flowAnimation 1s linear infinite;
+}
+
+/* Utilidad para ocultar scrollbar pero permitir scroll */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Máscara de desvanecimiento para scroll horizontal */
+.mask-linear-fade {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}

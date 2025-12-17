@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import * as Sentry from "@sentry/react";
 import { LangProvider } from './context/langContext.jsx';
 import { CookieManager } from "react-cookie-manager";
-// import { ApiProvider } from './context/apiContext.jsx'; // Descomentar si necesitas API
+import { cookieTranslations } from './data/cookieTranslations';
 import { PreloaderProvider } from './context/PreloaderContext.jsx'
 
 // Inicializar Sentry
@@ -24,22 +24,18 @@ createRoot(document.getElementById('root')).render(
           <Router>
             <CookieManager
               classNames={{
-                acceptButton: "!bg-[#f0f0f030] transition-all duration-300 hover:!bg-[#7d8570] !text-white text-xs text-medium w-full px-3 py-1.5 rounded-md mr-2",
-                declineButton: "!bg-[#1c1c1c] transition-all duration-300 hover:!bg-[#f00] w-full text-[#1c1c1c] text-xs px-3 py-1.5 rounded-md",
-                manageButton: "!text-white transition-all duration-300 hover:!border-[#7d8570] border border-gray-700 text-xs px-3 py-1.5 rounded-md",
+                acceptButton: "!bg-[#E3001D] hover:!bg-[#c20019] !text-white text-xs font-medium w-full px-3 py-2 rounded-lg transition-colors shadow-sm shadow-red-100",
+                declineButton: "!bg-gray-100 hover:!bg-gray-200 !text-gray-700 text-xs font-medium w-full px-3 py-2 rounded-lg transition-colors",
+                manageButton: "!bg-transparent border !border-gray-200 !text-gray-500 hover:!text-[#E3001D] hover:!border-[#E3001D] text-xs font-medium px-3 py-2 rounded-lg transition-colors",
+                manageSaveButton: "!bg-[#E3001D] hover:!bg-[#c20019] !text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors shadow-sm shadow-red-100",
+                manageCancelButton: "!bg-gray-100 hover:!bg-gray-200 !text-gray-700 text-xs font-medium px-3 py-2 rounded-lg transition-colors",
               }}
               cookieKitId={import.meta.env.VITE_COOKIE_KIT_ID}
               showManageButton={true}
-              theme="dark"
+              theme="light"
               displayType="popup"
-              enableFloatingButton={false}
-              translations={{
-                title: "Usamos cookies 🍪",
-                message: "Valoramos tu privacidad. Elige qué cookies deseas permitir.",
-                buttonText: "Aceptar todas",
-                declineText: "Rechazar todas",
-                manageText: "Gestionar preferencias"
-              }}
+              enableFloatingButton={true}
+              translations={cookieTranslations}
             />
             <App />
           </Router>
