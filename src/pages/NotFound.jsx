@@ -65,7 +65,7 @@ export const NotFound = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-red-50 relative overflow-hidden pt-50">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-red-50 relative overflow-hidden">
             {/* Círculos decorativos animados */}
             <motion.div 
                 className="absolute top-20 left-20 w-64 h-64 bg-[#E3001D]/10 rounded-full blur-3xl"
@@ -169,18 +169,32 @@ export const NotFound = () => {
                 </motion.div>
 
                 {/* Logo corporativo */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
-                    className="mt-16"
-                >
-                    <img 
-                        src="/images/citlabs_logo.png" 
-                        alt="CITLAB" 
-                        className="h-16 mx-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                    />
-                </motion.div>
+                <div className="flex gap-5 items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                        className="mt-16"
+                    >
+                        <img
+                            src="/images/dip_badajoz.png"
+                            alt="CITLAB"
+                            className="h-16 mx-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                        />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                        className="mt-16"
+                    >
+                        <img
+                            src="/images/citlabs_logo.png"
+                            alt="CITLAB"
+                            className="h-16 mx-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                        />
+                    </motion.div>
+                </div>
             </div>
         </div>
     )

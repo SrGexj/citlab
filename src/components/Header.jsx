@@ -434,11 +434,11 @@ export const Header = () => {
                             initial="hidden"
                             animate="visible"
                         >
-                            <motion.a href="#" className="flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-[#E3001D] transition-colors" variants={ctaItemVariants}>
+                            <motion.a href="/login" className="flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-[#E3001D] transition-colors" variants={ctaItemVariants}>
                                 <User className="w-4 h-4" />
                                 Acceso Usuarios
                             </motion.a>
-                            <motion.a href="#" className="bg-[#E3001D] hover:bg-red-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg shadow-lg shadow-red-500/20 transition-all" variants={ctaItemVariants}>
+                            <motion.a href="/register" className="bg-[#E3001D] hover:bg-red-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg shadow-lg shadow-red-500/20 transition-all" variants={ctaItemVariants}>
                                 Registrarse
                             </motion.a>
                         </motion.div>

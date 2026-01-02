@@ -18,7 +18,9 @@ function App() {
 
   return (
     <>
+    { location.pathname !== '/login' && location.pathname !== '/register' && (
       <Header />
+    )}
       <AnimatePresence mode='wait'>
         <main className="Main bg-white min-h-screen" >
           <Routes location={location} key={location.pathname}>
@@ -34,7 +36,9 @@ function App() {
           </Routes>
         </main> 
       </AnimatePresence>
+      { location.pathname !== '/login' && location.pathname !== '/register' && (
       <Footer />
+        )}
     </>
   )
 }
